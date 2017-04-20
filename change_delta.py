@@ -1,3 +1,7 @@
+"""
+Consumes raw atlas probe SOA data and calculates a delta between the first
+time an SOA serial was seen, and when it was updated on each destination address.
+"""
 
 import sys
 import json

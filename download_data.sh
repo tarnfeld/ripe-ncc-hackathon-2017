@@ -1,5 +1,10 @@
 #!/bin/bash
 
+###
+# Download time ranges of data from all root DNS servers in JSON format'
+# $ ./download_data.sh 1490745600 1490832000 outputs/
+###
+
 set -ex
 
 export FROM_TS="$1" # "1490745600"
