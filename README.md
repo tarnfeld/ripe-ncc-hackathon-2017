@@ -1,4 +1,5 @@
 
+
 ## ripe-ncc-hackathon-2017
 
 ### `change_delta.py`
@@ -61,3 +62,31 @@ Shane thinks this is a good way to show the life and death of a serial:
   Serial 2017033001:                                 |-----------|
   Serial 2017033002:                                          |-----------|
 ```
+
+
+### Running madprops
+
+You need to set up elasticsearch mapping template:
+
+    $ curl -X PUT http://localhost:9200/_template/madprops -d @madprops.mapping 
+
+You may need some dependencies:
+
+    $ pip install --user elasticsearch
+    $ pip install --user dnslib
+
+Then you can run the command:
+
+    $ ./madprops.py -h
+    usage: madprops.py [-h] [--start START] [--stop STOP] [--test TEST]
+                       [--interval INTERVAL] [--tag TAG] [--index INDEX]
+
+    optional arguments:
+      -h, --help           show this help message and exit
+      --start START
+      --stop STOP
+      --test TEST
+      --interval INTERVAL
+      --tag TAG
+      --index INDEX
+
