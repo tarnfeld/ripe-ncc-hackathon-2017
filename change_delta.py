@@ -32,4 +32,10 @@ for serial in dst_serials.keys():
         delta = dst_first - serial_first_appeared
         frequency_per_dst = dst_serials_counts[serial][dst]
         if frequency_per_dst > 1000:
-            print ",".join([str(v) for v in [serial, serial_first_appeared, dst, dst_first, delta]])
+            print json.dumps({
+                "serial": serial,
+                "serial_first_appeared": serial_first_appeared,
+                "dst": dst,
+                "dst_first_appeared": dst_first,
+                "delta": delta
+            })
