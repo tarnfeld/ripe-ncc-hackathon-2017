@@ -1,0 +1,125 @@
+{
+  "template": "madprops*",
+  "settings": {
+    "number_of_shards": 1
+  },
+  "mappings": {
+    "soa": {
+      "properties": {
+        "NSID": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "af": {
+          "type": "long"
+        },
+        "delta": {
+          "type": "long"
+        },
+        "dst_addr": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "first_timestamp": {
+          "type": "long"
+        },
+        "from": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "fw": {
+          "type": "long"
+        },
+        "group_id": {
+          "type": "long"
+        },
+        "lts": {
+          "type": "long"
+        },
+        "msm_id": {
+          "type": "long"
+        },
+        "msm_name": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "prb_id": {
+          "type": "long"
+        },
+        "proto": {
+          "type": "string"
+        },
+        "result": {
+          "properties": {
+            "ANCOUNT": {
+              "type": "long"
+            },
+            "ARCOUNT": {
+              "type": "long"
+            },
+            "ID": {
+              "type": "long"
+            },
+            "NSCOUNT": {
+              "type": "long"
+            },
+            "QDCOUNT": {
+              "type": "long"
+            },
+            "abuf": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "answers": {
+              "properties": {
+                "MNAME": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "NAME": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "RNAME": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "SERIAL": {
+                  "type": "long"
+                },
+                "TTL": {
+                  "type": "long"
+                },
+                "TYPE": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            },
+            "rt": {
+              "type": "double"
+            },
+            "size": {
+              "type": "long"
+            }
+          }
+        },
+        "src_addr": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "tag": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "type": {
+          "type": "string"
+        }
+      }
+    }
+  }
+
+}
